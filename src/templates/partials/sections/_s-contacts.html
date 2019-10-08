@@ -1,0 +1,110 @@
+{%set
+contacts = [
+  {
+    title: 'Адрес моего офиса:',
+    text: 'Киев, Ул. Коновальца, 29, м. Печерская'
+  },
+  {
+    title: 'Жду вашего звонка:',
+    text: '<a href="tel:+380666678274">+38 (066) 667-82-74</a>'
+  },
+  {
+    title: 'E-mail:',
+    text: '<a href="mailto:ShevchenkoLiliya@i.ua">ShevchenkoLiliya@i.ua</a>'
+  },
+  {
+    title: 'График работы:',
+    text: 'Вт - Сб (10:00 - 22:00)'
+  }
+]
+%}
+
+{%set
+form = {
+  title: 'Обратная связь',
+  subttl: { mod: 'contacts-block__text', title: 'Оставьте ваше данные в форме и я перезвоню <br>
+вам в ближайшее время' },
+  fields: [
+    {
+      name: 'input',
+      mod: 'input--light',
+      type: 'text',
+      placeholder: 'Имя',
+      fieldClass: ''
+    },
+    {
+      name: 'input',
+      mod: 'input--light',
+      type: 'tel',
+      placeholder: '+38 ( _ _ _ ) _ _ _ - _ _ - _ _',
+      fieldClass: ''
+    },
+    {
+      name: 'input',
+      mod: 'input--light',
+      type: 'mail',
+      placeholder: 'E-mail',
+      fieldClass: ''
+    },
+    {
+      name: 'input',
+      mod: 'input--light',
+      type: 'text',
+      placeholder: 'Причина обращения',
+      fieldClass: ''
+    },
+    {
+      name: 'input',
+      mod: 'input--light',
+      type: 'text',
+      placeholder: 'Желаемое время',
+      fieldClass: ''
+    },
+    {
+      name: 'textarea',
+      mod: 'textarea--light',
+      type: '',
+      placeholder: 'Комментарий (Необязательно)',
+      fieldClass: 'js-textarea'
+    }
+  ]
+}
+%}
+
+<!-- begin section -->
+<section class="section section--pt-lg section--pb-lg section--bg js-lazy" data-background-image="./img/bg-contacts.jpg">
+  <div class="container">
+    <!-- begin contacts -->
+    <div class="contacts">
+      <div class="row">
+        <div class="col-6">
+          <div class="contacts__content">
+            <!-- begin contacts-block -->
+            <div class="contacts-block">
+              <div class="contacts-block__title">
+                <h2 class="title title--h2">Свяжитесь со мной</h2>
+                <div class="contacts-block__text">Я всегда рада вашему звонку или визиту</div>
+              </div>
+
+              {% for i in contacts %}
+              <div class="contacts-block__block">
+                <div class="contacts-block__block-title">{{ i.title | safe }}</div>
+                <div class="contacts-block__block-text">{{ i.text | safe }}</div>
+              </div>
+              {% endfor %}
+            </div>
+            <!-- end contacts-block -->
+          </div>
+        </div>
+
+        <div class="col-6">
+          <div class="contacts__form">
+            {% include "partials/_form.html" %}
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end contacts -->
+  </div>
+</section>
+<!-- end section -->

@@ -1,0 +1,18 @@
+---
+title: Index page
+page: home
+header: {
+  mod: 'header--transp'
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/sections/_s-about-top.html" %}
+  {% include "partials/sections/_s-about.html" %}
+  {% include "partials/sections/_s-services.html" %}
+  {% include "partials/sections/_s-features.html" %}
+  {% include "partials/sections/_s-events.html" %}
+  {% include "partials/sections/_s-blog.html" %}
+  {% include "partials/sections/_s-contacts.html" %}
+{% endblock %}

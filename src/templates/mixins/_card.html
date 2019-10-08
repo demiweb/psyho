@@ -1,0 +1,48 @@
+{% from 'mixins/_btn.html' import btn %}
+{% set btn = btn %}
+
+{% from 'mixins/_icon.html' import icon %}
+{% set icon = icon %}
+
+{% macro card(mod, img, title, text, button, meta) %}
+<!-- begin card -->
+<a href="#" class="card{% if mod %} {{ mod }}{% endif %}">
+  {% if img %}
+  <span class="card__img js-lazy" data-background-image="./img/{{ img }}"></span>
+  {% endif %}
+
+
+
+  <span class="card__content">
+    {% if meta %}
+    <span class="card__meta">
+      <span class="meta">
+        <span class="meta__item">
+          {{ icon('eye') }}
+          645
+        </span>
+        <span class="meta__item">
+          {{ icon('calendar') }}
+          15.10.2019
+        </span>
+      </span>
+    </span>
+    {% endif %}
+    <span class="card__title">
+      <span class="title title--h5">{{ title | safe }}</span>
+    </span>
+
+    <span class="card__text">{{ text | safe }}</span>
+
+    <span class="card__btn">
+      {{ btn(
+        title = button.title,
+        mod = 'btn--arrow btn--transp btn--no-hover',
+        href = false,
+        isInline = true
+      ) }}
+    </span>
+  </span>
+</a>
+<!-- end card -->
+{% endmacro %}

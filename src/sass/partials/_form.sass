@@ -1,0 +1,29 @@
+.form
+  text-align: center
+  &__subttl
+    margin-bottom: 30px
+    +md
+      margin-bottom: 15px
+  &__field
+    +notlast
+      margin-bottom: 30px
+      +md
+        margin-bottom: 15px
+
+.input, .textarea
+  input, textarea
+    width: 100%
+    background-color: transparent
+    height: 32px
+    padding: 5px 0
+    +tr(border-color .3s)
+    &:focus
+      border-color: $accent
+  &--light
+    input, textarea
+      border-bottom: 1px solid  $gray-light
+
+.textarea
+  textarea
+    min-height: 100px
+    overflow: hidden

@@ -1,0 +1,72 @@
+{%set
+features = [
+  {
+    img: 'IMG_5991.jpg',
+    nmb: '01',
+    text: 'Наладите здоровую
+социальную жизнь'
+  },
+  {
+    img: 'IMG_5993.jpg',
+    nmb: '02',
+    text: 'Решите проблемы
+в личной жизни'
+  },
+  {
+    img: 'IMG_5999.jpg',
+    nmb: '03',
+    text: 'Освободитесь от тревог
+и страхов'
+  },
+  {
+    img: 'IMG_5996.jpg',
+    nmb: '04',
+    text: 'Обретете уверенность
+в себе'
+  },
+  {
+    img: 'IMG_5992.jpg',
+    nmb: '05',
+    text: 'Наладите отношение с
+близкими'
+  },
+  {
+    img: 'IMG_6002.jpg',
+    nmb: '06',
+    text: 'Обретете уверенность
+в достижениях целей'
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section">
+  <div class="container">
+    <div class="section__title">
+      <h2 class="title title--h2">Что вы получите, обратившись ко мне</h2>
+    </div>
+
+    <!-- begin features -->
+    <div class="features">
+      <div class="row">
+        {% for i in features %}
+        <div class="col-4">
+          <!-- begin feature -->
+          <div class="feature">
+            <div class="feature__img">
+              <img class="js-lazy" alt="" src="" data-src="./img/features/{{ i.img }}"/>
+            </div>
+
+            <div class="feature__nmb">{{ i.nmb | safe }}</div>
+
+            <div class="feature__text">{{ i.text | safe }}</div>
+          </div>
+          <!-- end feature -->
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <!-- end features -->
+  </div>
+</section>
+<!-- end section -->

@@ -1,0 +1,62 @@
+.about-sm
+  color: $c-text-dark
+  &__img
+    +cover
+    position: relative
+    padding-top: 130%
+  &__quote
+    position: absolute
+    left: percentage(2/5)
+    bottom: -10px
+    z-index: 1
+    min-width: 545px
+  &__content
+    +flex(center, normal, column)
+    padding-top: 20%
+  &__title
+    margin-bottom: 35px
+    +lg
+      margin-bottom: 25px
+    +md
+      margin-bottom: 15px
+  &__list
+    margin-bottom: 35px
+    +lg
+      margin-bottom: 25px
+    +md
+      margin-bottom: 15px
+  &__btns
+    +flex
+  &__btn
+    +notlast
+      margin-right: 20px
+
+.about
+  &__img
+    padding-top: 110%
+    max-width: calc(100% - 60px)
+    margin-left: auto
+  &__content
+    height: 100%
+    +flex(center, normal, column)
+  &__title
+    color: $c-text-dark
+    text-align: center
+    margin-bottom: 25px
+    +md
+      margin-bottom: 15px
+  &__text
+    font-style: italic
+    margin-bottom: 25px
+    +md
+      margin-bottom: 15px
+  &__slider
+    margin-bottom: 50px
+    +xl
+      margin-bottom: 40px
+    +lg
+      margin-bottom: 30px
+    +md
+      margin-bottom: 15px
+  &__btn
+    text-align: center

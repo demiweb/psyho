@@ -1,0 +1,65 @@
+<!-- begin section -->
+<section class="section section--pt-lg">
+  <div class="container">
+    <!-- begin about-sm -->
+    <div class="about-sm">
+      <div class="row">
+        <div class="col-5">
+          <div class="about-sm__img js-lazy" data-background-image="./img/home/img-top.jpg">
+            <div class="about-sm__quote">
+              <blockquote class="blockquote">
+                {{ mixins.icon('left-quote') }}
+                <p>Жизнь - это не то, что вы получаете,<br>
+              жизнь - это то, что вы делаете с полученным!</p></blockquote>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 offset-1">
+          <div class="about-sm__content">
+            <div class="about-sm__title">
+              <!-- begin title-block -->
+              <div class="title-block title title--h1">
+                <h1 class="title-block__title">Лилия Шевченко</h1>
+                <div class="title-block__subttl">Психолог, Психотерапевт</div>
+              </div>
+              <!-- end title-block -->
+            </div>
+
+            <div class="about-sm__list">
+              {{ mixins.list(
+                name = 'list',
+                modifications = { wrap: '', item: '', link: '' },
+                list = [
+                  { item: 'дипломированный психолог' },
+                  { item: 'сертифицированный психотерапевт' },
+                  { item: 'член восточноевропейской ассоциации гипнотерапевтов и клинических психологов.' }
+                ]
+              ) }}
+            </div>
+
+            <div class="about-sm__btns">
+              <div class="about-sm__btn">
+                {{ mixins.btn(
+                  title = 'Записаться на прием',
+                  mod = 'js-popup-open',
+                  href = false,
+                  attributes = { 'data-popup-open': '' }
+                ) }}
+              </div>
+
+              <div class="about-sm__btn">
+                {{ mixins.btn(
+                  title = 'Узнать больше о Лилии',
+                  mod = 'btn--transp btn--arrow'
+                ) }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end about-sm -->
+  </div>
+</section>
+<!-- end section -->

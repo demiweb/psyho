@@ -1,0 +1,63 @@
+<!-- begin section -->
+<section class="section">
+  <div class="container">
+    <div class="section__title">
+      <h2 class="title title--h2">Обо мне</h2>
+    </div>
+
+    <!-- begin about -->
+    <div class="about">
+      <div class="row">
+        <div class="col-6">
+          <div class="about__content">
+            <div class="about__title">
+              <div class="title title-block title--h3">
+                <h3 class="title-block__title">Лилия Шевченко</h3>
+                <div class="title-block__subttl">Психолог, Психотерапевт</div>
+              </div>
+            </div>
+
+            <div class="about__text text">Изучаю психологию с 2001 года, в 2008 году закончила государственный университет и получила квалификацию «психолог» и «преподаватель психологии», уже более 10 лет продолжаю обучаться разным направлениям психотерапии и совершенствовать своё мастерство в этой сфере, занимаюсь частной медицинской практикой с 2010 года;
+            </div>
+
+            <div class="about__slider">
+              <!-- begin slider -->
+              <div class="slider__wrap slider--cert__wrap">
+                <div class="slider js-slider js-lightgallery" data-slider="cert">
+                  {% for i in range(0, 6) %}
+                  <!-- begin slide -->
+                  <a
+                    class="slide js-lazy"
+                    href="./img/home/cert.png"
+                    data-background-image="./img/home/cert.png"
+                    >
+                    <span class="slide__icon">{{ mixins.icon('loupe') }}</span>
+                  </a>
+                  <!-- end slide -->
+                  {% endfor %}
+                </div>
+
+                <button class="slider__prev prev js-slider-prev"></button>
+                <button class="slider__next next js-slider-next"></button>
+              </div>
+              <!-- end slider -->
+            </div>
+
+            <div class="about__btn">
+              {{ mixins.btn(
+                title = 'Узнать больше о Лилии',
+                mod = 'btn--transp btn--arrow'
+              ) }}
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6">
+          <div class="about__img section-img js-lazy" data-background-image="./img/home/about.jpg"></div>
+        </div>
+      </div>
+    </div>
+    <!-- end about -->
+  </div>
+</section>
+<!-- end section -->

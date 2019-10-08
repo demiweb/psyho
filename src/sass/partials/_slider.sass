@@ -1,0 +1,64 @@
+.slider
+  &__wrap
+    position: relative
+    padding-left: 100px
+    padding-right: 100px
+  &__prev,
+  &__next
+    position: absolute
+    top: 50%
+    transform: translate(0, -50%)
+  &__prev
+    left: 0
+  &__next
+    right: 0
+    transform: translate(0, -50%) scaleX(-1)
+
+  &--cert
+    &__wrap
+      .slide
+        padding-top: 10%
+        background-repeat: no-repeat
+        background-size: contain
+        background-position: 50% 50%
+        position: relative
+        +tr(transform .3s)
+        +hover
+          +scale(1.1)
+          .slide__icon
+            visibility: visible
+            opacity: 1
+        &__icon
+          +vcenter
+          z-index: 1
+          background-color: $accent
+          border-radius: 50%
+          width: 70px
+          height: 70px
+          color: $white
+          +flex(center, center)
+          opacity: 0
+          visibility: hidden
+          +tr(opacity .3s, visibility .3s)
+          .icon
+            font-size: 30px
+
+
+.prev, .next
+  +flex(center, center)
+  background-color: $white
+  box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.11)
+  border-radius: 50%
+  width: 45px
+  height: 45px
+  color: $black
+  +before
+    +icon-arrow(10, 10, 1, currentColor, 45)
+    display: inline-block
+    margin-left: 4px
+
+.next
+  transform: scaleX(-1)
+  &.slider__next
+    transform: translate(0, -50%) scaleX(-1)
+  

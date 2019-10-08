@@ -1,0 +1,37 @@
+.features
+  margin-bottom: -55px
+
+.feature
+  display: block
+  margin-top: 100px
+  background-color: $white
+  border-radius: 5px
+  box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.11)
+  text-align: center
+  position: relative
+  padding: 30px
+  color: $c-text-dark
+  height: calc(100% - 100px - 55px)
+  margin-bottom: 55px
+  &__img
+    position: absolute
+    top: 0
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 200px
+    height: 200px
+    border: 5px solid  $gray-lighten
+    border-radius: 50%
+    overflow: hidden
+    img
+      max-height: 100%
+      +vcenter
+  &__nmb
+    text-transform: uppercase
+    color: $accent
+    margin-bottom: 85px
+    text-align: left
+  &__text
+    max-width: 170px
+    margin-left: auto
+    margin-right: auto

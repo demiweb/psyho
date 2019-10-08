@@ -1,0 +1,24 @@
+.header
+  position: fixed
+  z-index: 10
+  top: 0
+  left: 0
+  right: 0
+  background-color: $white
+  color: $c-text-dark
+  &__inner
+    height: $header-height
+    +flex(flex-start, center)
+  &__nav
+    flex-grow: 1
+
+  &--transp
+    background-color: transparent
+
+.contacts-sm
+  &__phone
+    font-weight: 700
+  &__btn
+    button, a
+      text-decoration: underline
+

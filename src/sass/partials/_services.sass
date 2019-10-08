@@ -1,0 +1,37 @@
+.services
+  +flex(flex-start, normal, row, wrap)
+
+.service-item
+  $this: &
+  display: block
+  +cover
+  position: relative
+  padding: 30px
+  padding-top: 25%
+  color: $white
+  border: 1px solid  $white
+  width: 50%
+  +before
+    +coverdiv
+    background-color: rgba($black, .4)
+  +hover
+    #{$this}__cover
+      visibility: visible
+      opacity: 1
+  &__title
+    // font-weight: 600
+  &__content
+    position: relative
+    z-index: 1
+  &__cover
+    font-weight: 700
+    background-color: rgba($accent, .8)
+    +flex(center, center)
+    +coverdiv
+    z-index: 2
+    visibility: hidden
+    opacity: 0
+    +tr(visibility .3s, opacity .3s)
+    .icon
+      font-size: 30px
+      margin-right: 5px

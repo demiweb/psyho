@@ -1,0 +1,56 @@
+{%set
+services = [
+  {
+    img: '01.jpg',
+    title: 'Психологическая консультация',
+    subttl: 'От 600 грн/час'
+  },
+  {
+    img: '02.jpg',
+    title: 'Психотерапия',
+    subttl: 'От 600 грн/час'
+  },
+  {
+    img: '03.jpg',
+    title: 'Терапия пар',
+    subttl: 'От 1200 грн/час'
+  },
+  {
+    img: '04.jpg',
+    title: 'Групповая работа',
+    subttl: 'От 2300 грн/час'
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section">
+  <div class="container">
+    <div class="section__title">
+      <h2 class="title title--h2">Услуги</h2>
+    </div>
+
+    <!-- begin services -->
+    <div class="services">
+      {% for i in services %}
+      <!-- begin service-item -->
+      <a href="#" class="service-item js-lazy" data-background-image="./img/services/{{ i.img }}">
+        <span class="service-item__content">
+          <span class="service-item__title">
+            <span class="title title--h4">{{ i.title | safe }}</span>
+          </span>
+          <span class="service-item__subttl">{{ i.subttl | safe }}</span>
+        </span>
+        <span class="service-item__cover">
+          {{ mixins.icon('loupe') }}
+          Подробнее об услуге
+        </span>
+      </a>
+      <!-- end service-item -->
+      
+      {% endfor %}
+    </div>
+    <!-- end services -->
+  </div>
+</section>
+<!-- end section -->
