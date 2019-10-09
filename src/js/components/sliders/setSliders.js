@@ -4,6 +4,7 @@ import classNames from './classNames';
 class MySlider {
   constructor(slider) {
     this.sliderClass = slider;
+    this.sliders = [];
   }
 
   _getOptions() {
@@ -15,18 +16,23 @@ class MySlider {
         prevButton,
         nextButton,
         onInit,
-        items: 3,
-        loop: true,
+        items: 1,
+        loop: false,
         nav: false,
         mouseDrag: true,
-        center: true,
+        responsive: {
+          768: {
+            items: 2,
+          },
+          992: {
+            items: 3,
+          },
+        },
       },
     });
   }
 
   _initSliders() {
-    this.sliders = [];
-
     this.containers.forEach((container) => {
       if (container.classList.contains(classNames.plugin.container)) return;
 

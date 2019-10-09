@@ -4,15 +4,24 @@
     +cover
     position: relative
     padding-top: 130%
+    +xs
+      margin-bottom: 80px
   &__quote
     position: absolute
     left: percentage(2/5)
     bottom: -10px
     z-index: 1
     min-width: 545px
+    +md
+      left: 0
+      min-width: 0
+      right: 0
+      bottom: -60px
   &__content
     +flex(center, normal, column)
     padding-top: 20%
+    +xs
+      padding-top: 0
   &__title
     margin-bottom: 35px
     +lg
@@ -27,18 +36,28 @@
       margin-bottom: 15px
   &__btns
     +flex
+    +md
+      display: block
   &__btn
     +notlast
       margin-right: 20px
+      +md
+        margin-right: 0
+        margin-bottom: 15px
 
 .about
   &__img
     padding-top: 110%
     max-width: calc(100% - 60px)
     margin-left: auto
+    +lg
+      max-width: none
   &__content
     height: 100%
     +flex(center, normal, column)
+    +xs
+      height: auto
+      margin-bottom: 15px
   &__title
     color: $c-text-dark
     text-align: center

@@ -4,19 +4,41 @@
   &__inner
     +flex(flex-start, center, row, wrap)
     padding-top: 15px
+    +sm
+      display: block
   &__logo
     width: percentage(3/12)
+    +md
+      width: 220px
+    +sm
+      width: auto
+      margin-bottom: 10px
+      text-align: center
   &__copy
     width: percentage(6/12)
     text-align: center
+    +md
+      width: calc(100% - 440px)
+    +sm
+      width: auto
+      margin-bottom: 10px
   &__contacts
     width: percentage(3/12)
     +flex(flex-end)
     color: $white
+    +md
+      width: 220px
+    +sm
+      width: auto
+      display: block
+      text-align: center
+      margin-bottom: 10px
   &__auth
     width: 100%
     margin-top: -15px
     +flex(center, center)
+    +lg
+      margin-top: 0
     a
       color: $white
       text-decoration: underline
@@ -27,5 +49,7 @@
     height: 35px
     width: 35px
     margin-right: 15px
+    +xss
+      margin-right: 5px
     .icon
       font-size: 21px

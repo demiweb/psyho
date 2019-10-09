@@ -12,6 +12,7 @@ import setPopups from './components/setPopups';
 import setGallery from './components/setGallery';
 import setTextareaHeight from './components/setTextareaHeight';
 import toggleHeader from './components/toggleHeader';
+import toggleMenu from './components/toggleMenu';
 
 document.addEventListener('DOMContentLoaded', () => {
   sayHello();
@@ -19,8 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
   setLazy();
 
   setGallery();
-  mySlider.init();
   setPopups();
+  mySlider.init();
   setTextareaHeight();
   toggleHeader();
+  toggleMenu();
 });

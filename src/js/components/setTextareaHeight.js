@@ -36,7 +36,7 @@ class TextareaHeight {
       this.adjustHeight(this.minHeight);
     });
 
-    const setHeightOnResize = debounce(66, (e) => {
+    const setHeightOnResize = debounce(200, () => {
       this.adjustHeight(this.minHeight);
     });
 

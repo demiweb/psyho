@@ -1,9 +1,21 @@
 .features
   margin-bottom: -55px
+  +lg
+    margin-bottom: -40px
+  +md
+    margin-bottom: -30px
+  +sm
+    margin-bottom: -20px
+
 
 .feature
+  $img-size: 200px
+  $img-size-lg: 170px
+  $img-size-md: 120px
+  $img-size-sm: 80px
   display: block
-  margin-top: 100px
+  // margin-top: 100px
+  margin-top: $img-size / 2
   background-color: $white
   border-radius: 5px
   box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.11)
@@ -11,26 +23,58 @@
   position: relative
   padding: 30px
   color: $c-text-dark
-  height: calc(100% - 100px - 55px)
+  height: calc(100% - #{$img-size/2} - 55px)
   margin-bottom: 55px
+  +lg
+    margin-bottom: 40px
+    margin-top: $img-size-lg / 2
+    height: calc(100% - #{$img-size-lg/2} - 40px)
+  +md
+    margin-bottom: 30px
+    margin-top: $img-size-md / 2
+    height: calc(100% - #{$img-size-md/2} - 30px)
+    padding: 20px
+  +sm
+    padding: 10px
+    margin-bottom: 20px
+    margin-top: $img-size-sm / 2
+    height: calc(100% - #{$img-size-sm/2} - 20px)
+  +xs
+    height: auto
   &__img
     position: absolute
     top: 0
     left: 50%
     transform: translate(-50%, -50%)
-    width: 200px
-    height: 200px
+    width: $img-size
+    height: $img-size
     border: 5px solid  $gray-lighten
     border-radius: 50%
     overflow: hidden
+    +lg
+      width: $img-size-lg
+      height: $img-size-lg
+    +md
+      width: $img-size-md
+      height: $img-size-md
+    +sm
+      width: $img-size-sm
+      height: $img-size-sm
     img
       max-height: 100%
+      width: 100%
       +vcenter
   &__nmb
     text-transform: uppercase
     color: $accent
     margin-bottom: 85px
     text-align: left
+    +lg
+      margin-bottom: 60px
+    +md
+      margin-bottom: 30px
+    +sm
+      margin-bottom: 20px
   &__text
     max-width: 170px
     margin-left: auto

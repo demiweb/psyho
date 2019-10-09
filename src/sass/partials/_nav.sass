@@ -1,13 +1,19 @@
 .nav
   text-align: center
-  
+  +lg
+    text-align: left
   li
     display: inline-block
     margin-left: 25px
     margin-right: 25px
+    +lg
+      display: block
+      margin-bottom: 10px
+      margin-right: 0
+      margin-left: 0
   a
     +tr(color .3s)
     +hover
-      color: $black
+      color: $accent
   .is-active
-    color: $black
+    color: $accent

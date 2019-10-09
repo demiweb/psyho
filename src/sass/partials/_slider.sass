@@ -3,6 +3,9 @@
     position: relative
     padding-left: 100px
     padding-right: 100px
+    +md
+      padding-left: 50px
+      padding-right: 50px
   &__prev,
   &__next
     position: absolute
@@ -17,7 +20,7 @@
   &--cert
     &__wrap
       .slide
-        padding-top: 10%
+        padding-top: 20%
         background-repeat: no-repeat
         background-size: contain
         background-position: 50% 50%
@@ -56,6 +59,12 @@
     +icon-arrow(10, 10, 1, currentColor, 45)
     display: inline-block
     margin-left: 4px
+  +md
+    width: 30px
+    height: 30px
+    +before
+      width: 7px
+      height: 7px
 
 .next
   transform: scaleX(-1)
