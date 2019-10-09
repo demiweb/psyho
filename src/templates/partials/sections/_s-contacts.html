@@ -21,48 +21,43 @@ contacts = [
 
 {%set
 form = {
-  title: 'Обратная связь',
+  title: { mod: 'title--white', title: 'Обратная связь' },
   subttl: { mod: 'contacts-block__text', title: 'Оставьте ваше данные в форме и я перезвоню <br>
 вам в ближайшее время' },
   fields: [
     {
       name: 'input',
-      mod: 'input--light',
       type: 'text',
       placeholder: 'Имя',
       fieldClass: ''
     },
     {
       name: 'input',
-      mod: 'input--light',
       type: 'tel',
       placeholder: '+38 ( _ _ _ ) _ _ _ - _ _ - _ _',
       fieldClass: ''
     },
     {
       name: 'input',
-      mod: 'input--light',
       type: 'mail',
       placeholder: 'E-mail',
       fieldClass: ''
     },
     {
       name: 'input',
-      mod: 'input--light',
       type: 'text',
       placeholder: 'Причина обращения',
       fieldClass: ''
     },
     {
       name: 'input',
-      mod: 'input--light',
       type: 'text',
       placeholder: 'Желаемое время',
       fieldClass: ''
     },
     {
       name: 'textarea',
-      mod: 'textarea--light',
+      mod: 'textarea--lg',
       type: '',
       placeholder: 'Комментарий (Необязательно)',
       fieldClass: 'js-textarea'
@@ -72,8 +67,17 @@ form = {
 %}
 
 <!-- begin section -->
-<section class="section section--pt-lg section--pb-lg section--bg js-lazy" data-background-image="./img/bg-contacts.jpg">
+<section class="section {% if not sectionContacts.breadcrumbs %}section--pt-lg{% endif %} section--pb-lg section--bg{% if sectionContacts.mod %} {{ sectionContacts.mod }}{% endif %} js-lazy" data-background-image="./img/bg-contacts.jpg">
   <div class="container">
+    {% if sectionContacts.breadcrumbs %}
+    <div class="section__breadcrumbs">
+      {{ mixins.list(
+        name = 'breadcrumbs',
+        modifications = { wrap: sectionContacts.breadcrumbs.mod, item: '', link: '' },
+        list = sectionContacts.breadcrumbs.list
+      ) }}
+    </div>
+    {% endif %}
     <!-- begin contacts -->
     <div class="contacts">
       <div class="row">

@@ -13,6 +13,7 @@ import setGallery from './components/setGallery';
 import setTextareaHeight from './components/setTextareaHeight';
 import toggleHeader from './components/toggleHeader';
 import toggleMenu from './components/toggleMenu';
+import truncateText from './components/truncateText';
 
 document.addEventListener('DOMContentLoaded', () => {
   sayHello();
@@ -25,4 +26,5 @@ document.addEventListener('DOMContentLoaded', () => {
   setTextareaHeight();
   toggleHeader();
   toggleMenu();
+  truncateText();
 });

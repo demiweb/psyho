@@ -1,0 +1,17 @@
+.pagination
+  text-align: center
+  li
+    display: inline-block
+    vertical-align: middle
+    margin-right: 5px
+    margin-left: 5px
+  .prev
+    margin-right: 10px
+  .next
+    margin-left: 10px
+  a
+    +tr(color .3s)
+    +hover
+      color: $accent
+  &.is-active
+    color: $accent

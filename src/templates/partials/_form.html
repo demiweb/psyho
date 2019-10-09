@@ -4,7 +4,7 @@
     <div class="form__inner">
       {% if form.title %}
       <div class="form__title">
-        <h3 class="title title--h3 title--white">{{ form.title | safe }}</h3>
+        <h3 class="title title--h3{% if form.title.mod %} {{ form.title.mod }}{% endif %}">{{ form.title.title or form.title | safe }}</h3>
       </div>
       {% endif %}
       {% if form.subttl %}

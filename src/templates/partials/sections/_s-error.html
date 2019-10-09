@@ -1,0 +1,37 @@
+<!-- begin section -->
+<section class="section section--lg section--bg section--pt-0 js-lazy" data-background-image="./img/bg-404.jpg">
+  <div class="container">
+    <div class="section__breadcrumbs">
+      {{ mixins.list(
+        name = 'breadcrumbs',
+        modifications = { wrap: '', item: '', link: '' },
+        list = [
+          { link: 'Главная' },
+          { item: '-' },
+          { link: '404', modLink: 'is-active' }
+        ]
+      ) }}
+    </div>
+
+    <!-- begin error -->
+    <div class="error">
+      <div class="error__inner">
+        <div class="error__title">
+          <h1 class="title title--h1">404</h1>
+        </div>
+
+        <div class="error__subttl">Такой страницы не существует, но вы 
+можете вернуться на главную</div>
+
+        <div class="error__btn">
+          {{ mixins.btn(
+            title = 'На главную',
+            mod = 'btn--arrow'
+          ) }}
+        </div>
+      </div>
+    </div>
+    <!-- end error -->
+  </div>
+</section>
+<!-- end section -->

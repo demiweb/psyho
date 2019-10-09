@@ -1,46 +1,21 @@
-{%set
-events = [
-  {
-    img: 'events/01.jpg',
-    title: 'Групповой мастер-класс «Узнай себя 
-по-настоящему»
-',
-    text: '25 октября пройдет мастер-класс по
-познанию своего внутреннего мира
-от психотерапевта Лилии Шевченко...'
-  },
-  {
-    img: 'events/02.jpg',
-    title: 'Лекция для менеджеров среднего звена 
-«Как не выгореть на рабочем месте»',
-    text: '25 октября пройдет мастер-класс по
-познанию своего внутреннего мира
-от психотерапевта Лилии Шевченко...'
-  },
-  {
-    img: 'events/03.jpg',
-    title: 'Групповой тренинг для офисных 
-работников «Спокойствие - как главная...',
-    text: '25 октября пройдет мастер-класс по
-познанию своего внутреннего мира
-от психотерапевта Лилии Шевченко...'
-  }
-]
-%}
 
 <!-- begin section -->
-<section class="section">
+<section class="section{% if sectionEvents.mod %} {{ sectionEvents.mod }}{% endif %}">
   <div class="container">
+    {% if sectionEvents.title %}
     <div class="section__title">
-      <h2 class="title title--h2">События</h2>
+      <h2 class="title title--h2">{{ sectionEvents.title or 'События' | safe }}</h2>
     </div>
+    {% endif %}
 
-    <div class="section__link">
-      <a href="#" class="link">Ко всем событиям</a>
-    </div>
+    {% if sectionEvents.link %}
+      <div class="section__link">
+        <a href="#" class="link">Ко всем событиям</a>
+      </div>
+    {% endif %}
 
     <div class="row">
-      {% for i in events %}
+      {% for i in sectionEvents.events %}
       <div class="col-lg-4 col-md-6 col-sm-6">
         {{ mixins.card(
           title = i.title,
@@ -51,6 +26,22 @@ events = [
       </div>
       {% endfor %}
     </div>
+
+    {% if sectionEvents.pagination %}
+    {{ mixins.list(
+      name = 'pagination',
+      modifications = { wrap: '', item: '', link: '' },
+      list = [
+          { link:  ' ', modLink: 'prev' },
+          { link: '1' },
+          { link: '2', modLink: 'is-active' },
+          { link: '3' },
+          { item: '...' },
+          { link: '6' },
+          { link:  ' ', modLink: 'next' }
+        ]
+    ) }}
+    {% endif %}
   </div>
 </section>
 <!-- end section -->

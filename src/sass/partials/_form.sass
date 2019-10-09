@@ -14,18 +14,17 @@
   input, textarea
     width: 100%
     background-color: transparent
+    overflow: hidden
     height: 32px
     padding: 5px 0
+    border-bottom: 1px solid  $gray-light
     +tr(border-color .3s)
     &:focus
       border-color: $accent
-  &--light
-    input, textarea
-      border-bottom: 1px solid  $gray-light
 
 .textarea
-  textarea
-    min-height: 100px
-    overflow: hidden
-    +sm
-      min-height: 80px
+  &--lg
+    textarea
+      min-height: 100px      
+      +sm
+        min-height: 80px

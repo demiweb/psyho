@@ -1,0 +1,20 @@
+---
+title: contacts
+page: contacts
+sectionContacts: {
+  mod: 'section--pt-0',
+  breadcrumbs: {
+    list: [
+      { link: 'Главная' },
+      { item: '-' },
+      { link: 'Контакты', modLink: 'is-active' }
+    ]
+  }
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/sections/_s-contacts.html" %}
+  {% include "partials/sections/_s-map.html" %}
+{% endblock %}

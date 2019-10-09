@@ -1,0 +1,37 @@
+.article
+  h2, h3, h4, h5, p, ul, ol
+    margin-bottom: 20px
+    +md
+      margin-bottom: 15px  
+  h1, h2, h3, h4, h5, h6
+    @extend .title
+    color: $black
+  h1
+    @extend .title--h1
+  h2
+    @extend .title--h2
+  h3
+    @extend .title--h3
+  h4
+    @extend .title--h4
+  h5    
+    @extend .title--h5
+
+  ul
+    li
+      &::before
+        content: '-'
+        display: inline-block
+        margin-right: .2em
+  ol
+    list-style-type: decimal
+    margin-left: 1.1em
+  a
+    color: $blue
+    text-decoration: underline
+  .title
+    color: $black
+  .title-block
+    &__title
+      display: inline-block
+      margin-bottom: .2em

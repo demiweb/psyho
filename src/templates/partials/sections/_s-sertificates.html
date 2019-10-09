@@ -1,0 +1,34 @@
+<!-- begin section -->
+<section class="section">
+  <div class="container">
+    <div class="section__title">
+      <h2 class="title title--h2">Сертификаты</h2>
+    </div>
+
+    <div class="about">
+      <div class="about__slider">
+        <!-- begin slider -->
+        <div class="slider__wrap slider--cert__wrap">
+          <div class="slider slider--cert  js-slider js-lightgallery" data-slider="cert">
+            {% for i in range(0, 6) %}
+            <!-- begin slide -->
+            <a
+            class="slide js-lazy"
+            href="./img/cert-md.png"
+            data-background-image="./img/cert-md.png"
+            >
+            <span class="slide__icon">{{ mixins.icon('loupe') }}</span>
+          </a>
+          <!-- end slide -->
+          {% endfor %}
+        </div>
+
+        <button class="slider__prev prev js-slider-prev"></button>
+        <button class="slider__next next js-slider-next"></button>
+      </div>
+      <!-- end slider -->
+    </div>
+  </div>
+  </div>
+</section>
+<!-- end section -->

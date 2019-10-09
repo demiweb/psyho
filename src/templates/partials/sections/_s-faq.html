@@ -1,0 +1,39 @@
+<!-- begin section -->
+<section class="section">
+  <div class="container">
+    <div class="section__title text-left">
+      <h2 class="title title--h2">Вопросы-ответы</h2>
+    </div>
+
+    <!-- begin faq -->
+    <div class="faq">
+        {% for i in range(0, 6) %}
+        <div class="faq__item">
+          <!-- begin faq-item -->
+          <div class="faq-item">
+            <div class="faq-item__title">
+              <h5 class="title title--h5">Как понять, с какой психологической проблемой работать, если их несколько?</h5>
+            </div>
+
+            <div class="faq-item__text js-truncate-text">
+              Вы рассказываете, что же случилось с вами, говорите о том, 
+что для вас важно, в чем ваша сложность и чего бы хотелось 
+получить в конечном итоге. Здесь психолог спросит вас, чем 
+же он/она может быть вам полезным/-ной в этом, а у вас
+ уже есть ответ, вы подготовились! ;) Это самый интересный 
+и самый полезный для вас этап, обычно он занимает много 
+времени, а в последующем займет все время консультации, 
+т.к. организационные вопросы вы решите сейчас – на первой 
+встрече.
+            </div>
+
+            <button class="faq-item__btn link link--bottom js-truncate-show">Читать ответ</button>
+          </div>
+          <!-- end faq-item -->
+        </div>
+        {% endfor %}
+    </div>
+    <!-- end faq -->
+  </div>
+</section>
+<!-- end section -->

@@ -23,11 +23,20 @@
     width: 100%
     background-color: $white
     position: relative
-    max-width: 1000px
-    padding: 30px
-    padding-top: 50px
+    max-width: 370px
+    border-radius: 20px
+    padding: 25px 55px
+    +xl
+      padding: 25px
+      padding-top: 50px
+    +md
+      padding: 20px
+      padding-top: 50px
     +sm
+      padding: 15px
+      padding-top: 50px
       font-size: $fz-sm-px
+      border-radius: 10px
   &__close
     +icon-close(20, 1, currentColor)
     position: absolute

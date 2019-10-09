@@ -1,0 +1,42 @@
+{%set
+form = {
+  title: { mod: 'title--black', title: 'Заказать звонок' },
+  subttl: { mod: '', title: 'Оставьте ваше данные в форме и я 
+перезвоню вам в ближайшее время' },
+  fields: [
+    {
+      name: 'input',
+      mod: '',
+      type: 'text',
+      placeholder: 'Имя',
+      fieldClass: ''
+    },
+    {
+      name: 'input',
+      mod: '',
+      type: 'tel',
+      placeholder: '+38 ( _ _ _ ) _ _ _ - _ _ - _ _',
+      fieldClass: ''
+    },
+    {
+      name: 'textarea',
+      mod: '',
+      type: '',
+      placeholder: 'Сообщение (Необязательно)',
+      fieldClass: 'js-textarea'
+    }
+  ]
+}
+%}
+
+<!-- begin popup -->
+<div class="popup js-popup" data-popup="call">
+  <div class="popup__inner">
+    <button class="popup__close js-popup-close"></button>
+
+    <div class="popup__form">
+      {% include "partials/_form.html" %}
+    </div>
+  </div>
+</div>
+<!-- end popup -->

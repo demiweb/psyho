@@ -27,14 +27,15 @@ body
   +lg
     height: $header-height-lg - 5px
 
-.out
-  +image('bg.jpg')
-  background-position: 0 0
-  background-size: 100% auto
-  background-repeat: no-repeat
+.main
   padding-top: $header-height
   +lg
     padding-top: $header-height-lg
+  &--bg
+    +image('bg.jpg')
+    background-position: 0 0
+    background-size: 100% auto
+    background-repeat: no-repeat
     
 .container
   max-width: 1200px
@@ -101,6 +102,10 @@ body
     display: inline-block
     margin-left: 5px
     position: relative
+  &--bottom
+    +after
+      +rotate(-45)
+      top: -.1em
 
 .meta
   color: #c3c3c3
