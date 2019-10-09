@@ -21,19 +21,22 @@
                 <img class="js-lazy" alt="" src="" data-src="./img/logo.png" />
               </a>
             </div>
-            <div class="header__nav">
-              <!-- begin nav -->
-              <nav class="nav">
-                <ul>
-                  <li><a href="#" class=" is-active">Обо мне</a></li>
-                  <li><a href="#">Услуги и цены</a></li>
-                  <li><a href="#">Полезное</a></li>
-                  <li><a href="#">События</a></li>
-                  <li><a href="#">Блог</a></li>
-                  <li><a href="#">Контакты</a></li>
-                </ul>
-              </nav>
-              <!-- end nav -->
+            <div class="header__nav js-menu">
+              <div class="header__nav-in">
+                <button class="header__close js-menu-close"></button>
+                <!-- begin nav -->
+                <nav class="nav">
+                  <ul>
+                    <li><a href="#" class=" is-active">Обо мне</a></li>
+                    <li><a href="#">Услуги и цены</a></li>
+                    <li><a href="#">Полезное</a></li>
+                    <li><a href="#">События</a></li>
+                    <li><a href="#">Блог</a></li>
+                    <li><a href="#">Контакты</a></li>
+                  </ul>
+                </nav>
+                <!-- end nav -->
+              </div>
             </div>
             <div class="header__contacts">
               <!-- begin contacts-sm -->
@@ -47,6 +50,9 @@
               </div>
               <!-- end contacts-sm -->
             </div>
+            <div class="header__burger">
+              <button class="burger js-burger"><span></span></button>
+            </div>
           </div>
         </div>
       </header>
@@ -59,7 +65,7 @@
             <!-- begin about-sm -->
             <div class="about-sm">
               <div class="row">
-                <div class="col-5">
+                <div class="col-sm-5">
                   <div class="about-sm__img js-lazy" data-background-image="./img/home/img-top.jpg">
                     <div class="about-sm__quote">
                       <blockquote class="blockquote">
@@ -73,7 +79,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-6 offset-1">
+                <div class="col-sm-6 offset-xl-1">
                   <div class="about-sm__content">
                     <div class="about-sm__title">
                       <!-- begin title-block -->
@@ -119,7 +125,7 @@
             <!-- begin about -->
             <div class="about">
               <div class="row">
-                <div class="col-6">
+                <div class="col-sm-6">
                   <div class="about__content">
                     <div class="about__title">
                       <div class="title title-block title--h3">
@@ -227,7 +233,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-6">
+                <div class="col-sm-6">
                   <div class="about__img section-img js-lazy" data-background-image="./img/home/about.jpg"></div>
                 </div>
               </div>
@@ -334,7 +340,7 @@
             <!-- begin features -->
             <div class="features">
               <div class="row">
-                <div class="col-4">
+                <div class="col-md-4 col-sm-6">
                   <!-- begin feature -->
                   <div class="feature">
                     <div class="feature__img">
@@ -345,7 +351,7 @@
                   </div>
                   <!-- end feature -->
                 </div>
-                <div class="col-4">
+                <div class="col-md-4 col-sm-6">
                   <!-- begin feature -->
                   <div class="feature">
                     <div class="feature__img">
@@ -356,7 +362,7 @@
                   </div>
                   <!-- end feature -->
                 </div>
-                <div class="col-4">
+                <div class="col-md-4 col-sm-6">
                   <!-- begin feature -->
                   <div class="feature">
                     <div class="feature__img">
@@ -367,7 +373,7 @@
                   </div>
                   <!-- end feature -->
                 </div>
-                <div class="col-4">
+                <div class="col-md-4 col-sm-6">
                   <!-- begin feature -->
                   <div class="feature">
                     <div class="feature__img">
@@ -378,7 +384,7 @@
                   </div>
                   <!-- end feature -->
                 </div>
-                <div class="col-4">
+                <div class="col-md-4 col-sm-6">
                   <!-- begin feature -->
                   <div class="feature">
                     <div class="feature__img">
@@ -389,7 +395,7 @@
                   </div>
                   <!-- end feature -->
                 </div>
-                <div class="col-4">
+                <div class="col-md-4 col-sm-6">
                   <!-- begin feature -->
                   <div class="feature">
                     <div class="feature__img">
@@ -416,7 +422,7 @@
               <a href="#" class="link">Ко всем событиям</a>
             </div>
             <div class="row">
-              <div class="col-4">
+              <div class="col-lg-4 col-md-6 col-sm-6">
                 <!-- begin card -->
                 <a href="#" class="card">
                   <span class="card__img js-lazy" data-background-image="./img/events/01.jpg"></span>
@@ -426,13 +432,13 @@
                     </span>
                     <span class="card__text">25 октября пройдет мастер-класс по познанию своего внутреннего мира от психотерапевта Лилии Шевченко...</span>
                     <span class="card__btn">
-                      <span class="btn btn--arrow btn--transp btn--no-hover">Узнать о событии</span>
+                      <span class="btn btn--arrow btn--transp btn--no-hover btn--full-sm">Узнать о событии</span>
                     </span>
                   </span>
                 </a>
                 <!-- end card -->
               </div>
-              <div class="col-4">
+              <div class="col-lg-4 col-md-6 col-sm-6">
                 <!-- begin card -->
                 <a href="#" class="card">
                   <span class="card__img js-lazy" data-background-image="./img/events/02.jpg"></span>
@@ -442,13 +448,13 @@
                     </span>
                     <span class="card__text">25 октября пройдет мастер-класс по познанию своего внутреннего мира от психотерапевта Лилии Шевченко...</span>
                     <span class="card__btn">
-                      <span class="btn btn--arrow btn--transp btn--no-hover">Узнать о событии</span>
+                      <span class="btn btn--arrow btn--transp btn--no-hover btn--full-sm">Узнать о событии</span>
                     </span>
                   </span>
                 </a>
                 <!-- end card -->
               </div>
-              <div class="col-4">
+              <div class="col-lg-4 col-md-6 col-sm-6">
                 <!-- begin card -->
                 <a href="#" class="card">
                   <span class="card__img js-lazy" data-background-image="./img/events/03.jpg"></span>
@@ -458,7 +464,7 @@
                     </span>
                     <span class="card__text">25 октября пройдет мастер-класс по познанию своего внутреннего мира от психотерапевта Лилии Шевченко...</span>
                     <span class="card__btn">
-                      <span class="btn btn--arrow btn--transp btn--no-hover">Узнать о событии</span>
+                      <span class="btn btn--arrow btn--transp btn--no-hover btn--full-sm">Узнать о событии</span>
                     </span>
                   </span>
                 </a>
@@ -478,7 +484,7 @@
               <a href="#" class="link">Все статьи</a>
             </div>
             <div class="row">
-              <div class="col-4">
+              <div class="col-lg-4 col-md-6 col-sm-6">
                 <!-- begin card -->
                 <a href="#" class="card">
                   <span class="card__content">
@@ -505,13 +511,13 @@
                     </span>
                     <span class="card__text">Не секрет, что многие пары испытывают проблемы в отношения, чувствуют себя неудовлетворенными и страдают...</span>
                     <span class="card__btn">
-                      <span class="btn btn--arrow btn--transp btn--no-hover">Читать статью</span>
+                      <span class="btn btn--arrow btn--transp btn--no-hover btn--full-sm">Читать статью</span>
                     </span>
                   </span>
                 </a>
                 <!-- end card -->
               </div>
-              <div class="col-4">
+              <div class="col-lg-4 col-md-6 col-sm-6">
                 <!-- begin card -->
                 <a href="#" class="card">
                   <span class="card__content">
@@ -538,13 +544,13 @@
                     </span>
                     <span class="card__text">Не секрет, что многие пары испытывают проблемы в отношения, чувствуют себя неудовлетворенными и страдают...</span>
                     <span class="card__btn">
-                      <span class="btn btn--arrow btn--transp btn--no-hover">Читать статью</span>
+                      <span class="btn btn--arrow btn--transp btn--no-hover btn--full-sm">Читать статью</span>
                     </span>
                   </span>
                 </a>
                 <!-- end card -->
               </div>
-              <div class="col-4">
+              <div class="col-lg-4 col-md-6 col-sm-6">
                 <!-- begin card -->
                 <a href="#" class="card">
                   <span class="card__content">
@@ -571,7 +577,7 @@
                     </span>
                     <span class="card__text">Не секрет, что многие пары испытывают проблемы в отношения, чувствуют себя неудовлетворенными и страдают...</span>
                     <span class="card__btn">
-                      <span class="btn btn--arrow btn--transp btn--no-hover">Читать статью</span>
+                      <span class="btn btn--arrow btn--transp btn--no-hover btn--full-sm">Читать статью</span>
                     </span>
                   </span>
                 </a>
@@ -587,7 +593,7 @@
             <!-- begin contacts -->
             <div class="contacts">
               <div class="row">
-                <div class="col-6">
+                <div class="col-sm-6">
                   <div class="contacts__content">
                     <!-- begin contacts-block -->
                     <div class="contacts-block">
@@ -615,7 +621,7 @@
                     <!-- end contacts-block -->
                   </div>
                 </div>
-                <div class="col-6">
+                <div class="col-sm-6">
                   <div class="contacts__form">
                     <!-- begin form -->
                     <div class="form">
