@@ -38,7 +38,7 @@ class MySlider {
 
       const slider = new Slider(container, this.getOptions);
       slider.init();
-      this.sliders.push(slider);
+      this.sliders = [...this.sliders, slider];
     });
   }
 
