@@ -10,3 +10,4 @@ PageList:
 - file: contacts.html
 - file: about.html
 - file: 404.html
+- file: services.html

@@ -1,0 +1,24 @@
+---
+title: services
+page: services
+hero: {
+  bg: 'bg-hero-services.jpg',
+  title: 'Услуги и цены',
+  breadcrumbs: {
+    list: [
+      { link: 'Главная' },
+      { item: '-' },
+      { link: 'Услуги и цены', modLink: 'is-active' }
+    ]
+  }
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/_hero.html" %}
+  {% include "partials/sections/_s-services-common.html" %}
+  {% include "partials/sections/_s-services-themes.html" %}
+  {% include "partials/sections/_s-services-list.html" %}
+  {% include "partials/sections/_s-contacts.html" %}
+{% endblock %}

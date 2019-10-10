@@ -46,3 +46,24 @@
     .icon
       font-size: 30px
       margin-right: 5px
+
+.service-meta
+  +flex(flex-start, center)
+  +md
+    display: block
+  &__item
+    +notlast
+      margin-right: 40px
+      +lg
+        margin-right: 20px
+      +md
+        margin-right: 0
+        margin-bottom: 10px
+  &__icon
+    color: $accent
+    display: inline-block
+    .icon
+      font-size: 1.3em
+      position: relative
+      margin-right: .2em
+      top: .2em
